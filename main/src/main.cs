@@ -1,5 +1,8 @@
 using System;
 using FormaGen.CommandLines;
+using System.Linq;
+using Spectre.Console;
+
 
 namespace FormaGen
 {
@@ -7,10 +10,10 @@ namespace FormaGen
     {
         static void Main(string[] args)
         {
-            var cmdline = CmdLine.Create( args );
-            if( cmdline == null ) return;
+            var cmdline = CmdLine.Create(args);
+            if (cmdline == null) return;
 
-            Console.WriteLine( cmdline.ProcessTypes.ToString() );
+            Console.WriteLine(cmdline.ProcessTypes.ToString());
         }
     }
 }
